@@ -88,14 +88,6 @@ const Projects = () => {
                       Code
                     </a>
                   </Button>
-                  {project.demoLink && (
-                    <Button variant="default" size="sm" className="bg-accent1 hover:bg-accent1/90" asChild>
-                      <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                  )}
                 </div>
               </div>
             </div>

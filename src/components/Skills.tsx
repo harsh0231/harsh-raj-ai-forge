@@ -69,7 +69,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-lg shadow-md p-6 animate-fade-up card-hover"
+              className="bg-card rounded-lg shadow-md p-6 animate-fade-up card-hover gradient-border"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center gap-3 mb-6">
@@ -84,7 +84,7 @@ const Skills = () => {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-foreground/70">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2" indicatorClassName="bg-gradient-to-r from-accent1 to-accent2" />
+                    <Progress value={skill.level} className="h-2" />
                   </div>
                 ))}
               </div>

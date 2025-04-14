@@ -13,14 +13,14 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden">
       <div className="absolute top-0 right-0 -z-10 w-full h-full">
-        <div className="absolute top-1/4 right-0 w-72 h-72 bg-accent1/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent2/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-1/4 right-0 w-72 h-72 bg-accent1/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent2/10 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: "1s" }}></div>
       </div>
       
       <div className="container mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
         <div className="animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            Hi, I'm <span className="highlight">Harsh Raj</span>
+            Hi, I'm <span className="gradient-text">Harsh Raj</span>
           </h1>
           <div className="relative h-12 mb-6">
             <div className="typewriter text-2xl md:text-3xl font-display">
@@ -49,24 +49,24 @@ const Hero = () => {
         </div>
         
         <div className="grid grid-cols-2 gap-6 relative">
-          <div className="absolute w-[85%] h-[85%] bg-gradient-to-r from-accent1/20 to-accent2/20 blur-xl rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10"></div>
-          <div className="animate-float delay-100 col-span-2 bg-card shadow-xl rounded-xl p-6 text-center card-hover">
-            <Brain className="w-10 h-10 mx-auto mb-4 text-accent1" />
+          <div className="absolute w-[85%] h-[85%] bg-gradient-to-r from-accent1/20 to-accent2/20 blur-xl rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -z-10 animate-pulse"></div>
+          <div className="animate-float delay-100 col-span-2 bg-card shadow-xl rounded-xl p-6 text-center card-hover gradient-border">
+            <Brain className="w-10 h-10 mx-auto mb-4 gradient-text" />
             <h3 className="font-display font-semibold mb-2">Neural Networks</h3>
             <p className="text-sm text-foreground/70">Specialized in CNN for computer vision & pose estimation</p>
           </div>
-          <div className="animate-float delay-200 bg-card shadow-xl rounded-xl p-6 text-center card-hover">
-            <Database className="w-10 h-10 mx-auto mb-4 text-accent2" />
+          <div className="animate-float delay-200 bg-card shadow-xl rounded-xl p-6 text-center card-hover gradient-border">
+            <Database className="w-10 h-10 mx-auto mb-4 gradient-text" />
             <h3 className="font-display font-semibold mb-2">Data Analysis</h3>
             <p className="text-sm text-foreground/70">Python, Numpy, Pandas, SQL</p>
           </div>
-          <div className="animate-float delay-300 bg-card shadow-xl rounded-xl p-6 text-center card-hover">
-            <Code className="w-10 h-10 mx-auto mb-4 text-accent1" />
+          <div className="animate-float delay-300 bg-card shadow-xl rounded-xl p-6 text-center card-hover gradient-border">
+            <Code className="w-10 h-10 mx-auto mb-4 gradient-text" />
             <h3 className="font-display font-semibold mb-2">NLP</h3>
             <p className="text-sm text-foreground/70">LangChain, LLMs, Sentiment Analysis</p>
           </div>
-          <div className="animate-float delay-400 col-span-2 bg-card shadow-xl rounded-xl p-6 text-center card-hover">
-            <BarChart3 className="w-10 h-10 mx-auto mb-4 text-accent2" />
+          <div className="animate-float delay-400 col-span-2 bg-card shadow-xl rounded-xl p-6 text-center card-hover gradient-border">
+            <BarChart3 className="w-10 h-10 mx-auto mb-4 gradient-text" />
             <h3 className="font-display font-semibold mb-2">ROS2 & Embedded Systems</h3>
             <p className="text-sm text-foreground/70">Expertise in ROS2 architecture & robotics applications</p>
           </div>

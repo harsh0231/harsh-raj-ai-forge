@@ -80,7 +80,7 @@
     @apply text-3xl md:text-4xl font-display font-bold mb-8 relative;
   }
   .section-title::after {
-    @apply content-[''] absolute -bottom-3 left-0 w-20 h-1 bg-accent1;
+    @apply content-[''] absolute -bottom-3 left-0 w-20 h-1 bg-gradient-to-r from-accent1 to-accent2;
   }
   .highlight {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-accent1 to-accent2;
@@ -89,9 +89,18 @@
     @apply transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1;
   }
   .btn-primary {
-    @apply bg-accent1 hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors;
+    @apply bg-gradient-to-r from-accent1 to-accent2 hover:from-accent1/90 hover:to-accent2/90 text-white px-6 py-3 rounded-md font-medium transition-colors;
   }
   .typewriter {
     @apply overflow-hidden whitespace-nowrap border-r-4 border-primary animate-typing;
+  }
+  .gradient-card {
+    @apply bg-gradient-to-br from-card to-secondary/20 backdrop-blur-sm;
+  }
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:p-[1px] before:rounded-lg before:bg-gradient-to-r before:from-accent1/20 before:to-accent2/20 before:-z-10;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent1 to-accent2;
   }
 }

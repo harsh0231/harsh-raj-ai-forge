@@ -110,6 +110,10 @@ export default {
 				blink: {
 					'0%, 100%': { borderColor: 'transparent' },
 					'50%': { borderColor: 'hsl(var(--primary))' }
+				},
+				shimmer: {
+					'0%': { backgroundPosition: '-1000px 0' },
+					'100%': { backgroundPosition: '1000px 0' }
 				}
 			},
 			animation: {
@@ -119,7 +123,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse': 'pulse 2s ease-in-out infinite',
-				'typing': 'typing 3.5s steps(40, end), blink .75s step-end infinite'
+				'typing': 'typing 3.5s steps(40, end), blink .75s step-end infinite',
+				'shimmer': 'shimmer 2s linear infinite'
 			}
 		}
 	},

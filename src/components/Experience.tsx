@@ -41,13 +41,14 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-20 relative">
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-background/5 to-transparent"></div>
       <div className="container mx-auto px-4">
         <h2 className="section-title">Work Experience</h2>
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-0.5 bg-border"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-accent1/20 via-accent1/50 to-accent2/20"></div>
           
           {experiences.map((exp, index) => (
             <div 
@@ -55,19 +56,23 @@ const Experience = () => {
               className={`mb-12 md:mb-0 md:w-1/2 ${
                 index % 2 === 0 ? 'md:pr-12 md:text-right md:self-end md:ml-auto' : 'md:pl-12 md:text-left'
               } relative animate-fade-up`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Timeline dot */}
-              <div className="hidden md:block absolute w-4 h-4 bg-accent1 rounded-full top-6 transform -translate-y-1/2 z-10 shadow-md
-                            border-4 border-background
-                            left-[calc(-12px-8px)]">
+              <div className="hidden md:block absolute w-4 h-4 bg-gradient-to-r from-accent1 to-accent2 rounded-full top-6 transform -translate-y-1/2 z-10 shadow-lg
+                            border-4 border-background animate-pulse"
+                   style={{ 
+                     left: index % 2 === 0 ? 'calc(-12px-8px)' : 'auto',
+                     right: index % 2 === 1 ? 'calc(-12px-8px)' : 'auto',
+                    }}
+              >
               </div>
               
-              <div className={`bg-card shadow-md rounded-lg p-6 md:mb-16 card-hover ${
+              <div className={`bg-card shadow-md rounded-lg p-6 md:mb-16 card-hover gradient-border ${
                 index % 2 === 0 ? 'md:rounded-tr-none' : 'md:rounded-tl-none'
               }`}>
                 <h3 className="font-display text-xl font-semibold">{exp.title}</h3>
-                <h4 className="text-accent1 font-medium mb-2">{exp.company}</h4>
+                <h4 className="gradient-text font-medium mb-2">{exp.company}</h4>
                 
                 <div className="flex flex-wrap gap-4 mb-4 text-sm text-foreground/70">
                   <div className="flex items-center gap-1">
