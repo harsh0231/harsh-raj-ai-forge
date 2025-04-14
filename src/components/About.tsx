@@ -40,8 +40,8 @@ const About = () => {
                 <div>
                   <h3 className="font-display font-semibold text-lg mb-2">Professional Experience</h3>
                   <p className="text-foreground/80">
-                    Currently working as a Data Scientist at DATAINTELLIAGE pvt.ltd, with previous experience 
-                    at TagbinServices and Boston Consulting Group.
+                    Currently working as a Data Analyst at Tagbin Services Pvt. Ltd., with previous experience 
+                    as a Data Scientist at DATAINTELLIAGE pvt.ltd and as an intern at Boston Consulting Group.
                   </p>
                 </div>
               </div>
