@@ -70,8 +70,8 @@ export default {
 				},
 				dark: '#1A1F2C',
 				light: '#F5F7FA',
-				accent1: '#4A6CF7',
-				accent2: '#1EAEDB',
+				accent1: '#E51D35', // Ultron red
+				accent2: '#7A8CB0', // Metallic blue
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -114,6 +114,11 @@ export default {
 				shimmer: {
 					'0%': { backgroundPosition: '-1000px 0' },
 					'100%': { backgroundPosition: '1000px 0' }
+				},
+				'energy-pulse': {
+					'0%': { boxShadow: '0 0 5px #E51D35' },
+					'50%': { boxShadow: '0 0 20px #E51D35' },
+					'100%': { boxShadow: '0 0 5px #E51D35' }
 				}
 			},
 			animation: {
@@ -124,9 +129,14 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'pulse': 'pulse 2s ease-in-out infinite',
 				'typing': 'typing 3.5s steps(40, end), blink .75s step-end infinite',
-				'shimmer': 'shimmer 2s linear infinite'
+				'shimmer': 'shimmer 2s linear infinite',
+				'energy-pulse': 'energy-pulse 2s infinite'
+			},
+			boxShadow: {
+				'ultron': '0 0 15px rgba(229, 29, 53, 0.5)'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

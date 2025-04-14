@@ -61,7 +61,7 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-secondary/50">
+    <section id="skills" className="py-20 bg-secondary/50 circuit-bg">
       <div className="container mx-auto px-4">
         <h2 className="section-title">Skills & Expertise</h2>
         
@@ -69,7 +69,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="bg-card rounded-lg shadow-md p-6 animate-fade-up card-hover gradient-border"
+              className="bg-card rounded-lg shadow-md p-6 animate-fade-up card-hover gradient-border ultron-glow"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-center gap-3 mb-6">
@@ -84,7 +84,8 @@ const Skills = () => {
                       <span className="font-medium">{skill.name}</span>
                       <span className="text-foreground/70">{skill.level}%</span>
                     </div>
-                    <Progress value={skill.level} className="h-2" />
+                    <Progress value={skill.level} className="h-2 bg-secondary/50" 
+                      indicatorClassName="bg-gradient-to-r from-accent1 to-accent2" />
                   </div>
                 ))}
               </div>

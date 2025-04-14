@@ -1,3 +1,4 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -12,10 +13,10 @@
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em rgba(229, 29, 53, 0.6));
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em rgba(229, 29, 53, 0.6));
 }
 
 @keyframes logo-spin {
@@ -40,3 +41,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.ultron-glow {
+  box-shadow: 0 0 15px rgba(229, 29, 53, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.ultron-glow:hover {
+  box-shadow: 0 0 25px rgba(229, 29, 53, 0.8);
+}
+
+.circuit-bg {
+  background-color: rgba(35, 40, 64, 0.15);
+  background-image: 
+    linear-gradient(rgba(229, 29, 53, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 29, 53, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
