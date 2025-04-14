@@ -28,9 +28,35 @@
   }
 }
 
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-slow-reverse {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+  }
+  
+  .animate-spin-slow-reverse {
+    animation: spin-slow-reverse 10s linear infinite;
   }
 }
 
@@ -57,5 +83,108 @@
     linear-gradient(rgba(229, 29, 53, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(229, 29, 53, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+/* AI circuitry animation */
+.ai-circuitry {
+  position: relative;
+}
+
+.ai-circuitry::before,
+.ai-circuitry::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(229, 29, 53, 0.8), transparent);
+  width: 50%;
+  height: 1px;
+  animation: circuit-pulse 3s infinite;
+}
+
+.ai-circuitry::before {
+  top: 0;
+  left: 0;
+}
+
+.ai-circuitry::after {
+  bottom: 0;
+  right: 0;
+  animation-delay: 1.5s;
+}
+
+@keyframes circuit-pulse {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+/* Neural network animation */
+.neural-path {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-path::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(229, 29, 53, 0.2), transparent);
+  animation: neural-pulse 3s infinite linear;
+}
+
+@keyframes neural-pulse {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Data flow animation */
+.data-flow {
+  position: relative;
+}
+
+.data-flow::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(229, 29, 53, 0.8);
+  box-shadow: 0 0 10px rgba(229, 29, 53, 0.8);
+  animation: data-flow 4s infinite linear;
+}
+
+@keyframes data-flow {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+  }
 }
 
